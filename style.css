@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+    --clr-primary-pale-blue: hsl(225, 100%, 94%);
+    --clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+    --clr-neutral-blue-100: hsl(225, 100%, 98%);
+    --clr-neutral-blue-300: hsl(224, 23%, 55%);
+    --clr-neutral-blue-800: hsl(223, 47%, 23%);
+
+    --ff-main: 'Red Hat Display', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-primary-pale-blue);
+    font-family: var(--ff-main);
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+}
+
+#card {
+    width: 90%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 160px 200px 100px 120px;
+}
+
+#card #image-box #image {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+#introduction, #plan #payment{
+    margin: 10%;
+}
+
+#card #introduction{
+    justify-self: center;
+}
+
+#card #introduction h2{
+    color: var(--clr-neutral-blue-800);
+}
+
+#card #introduction p{
+    color:var(--clr-neutral-blue-300)
+
+}
+
+#card #plan{
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--clr-neutral-blue-100);
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+#card #plan #music-icon{
+    height: 60%;
+    width: auto;
+}
+
+#card #plan #left-plan h2{
+    margin-bottom: 0;
+    font-size: 16px;
+    color: var(--clr-neutral-blue-800);
+} 
+
+#card #plan #left-plan p{
+    margin-top: 0;
+    font-size: 15px;
+    color: var(--clr-neutral-blue-300);
+} 
+
+#card #plan #right-plan a{
+    font-size: 14px;
+    color: var(--clr-primary-bright-blue);
+    font-weight: 700;
+}
+
+#card #payment{
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    height: 80%;
+}
+
+#card #payment #proceed{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--clr-primary-bright-blue);
+    color: white;
+    font-weight: 400;
+    border: none;
+    box-shadow: 0 15px 20px 0 var(--clr-primary-pale-blue);
+}
+
+#card #payment #cancel{
+    background-color: white;
+    border: none;
+    color: var(--clr-neutral-blue-300);
+    font-weight: 800;;
+}
+
+
+@media (min-width: 1200px) {
+
+    body{
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+    }
+
+    #card{
+        width: 350px;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+}
